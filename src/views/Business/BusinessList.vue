@@ -5,18 +5,22 @@
         <div class="mt-16 mb-10 d-flex align-center">
           <v-btn color="primary">Filter</v-btn>
           <v-checkbox
+            v-model="filters.pet_friendly"
             class="mt-0 ml-3"
             label="Pets"
             color="secondary"
-            value="secondary"
             hide-details
+            true-value="true"
+            false-value="false"
           ></v-checkbox>
           <v-checkbox
+            v-model="filters.accept_cards"
             class="mt-0 ml-3"
             label="Credit card"
             color="secondary"
-            value="secondary"
             hide-details
+            true-value="true"
+            false-value="false"
           ></v-checkbox>
         </div>
         <div>
@@ -63,6 +67,7 @@ export default class BusinessList extends Vue {
     this.owners = await this.ownerService.all();
   }
 
+  @Watch("filters")
   async getBusinessList(): Promise<void> {
     let promises: Array<Promise<Array<IBusiness>>> = this.owners.map(
       async (owner): Promise<Array<IBusiness>> => {
