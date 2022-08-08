@@ -43,7 +43,9 @@
 
             <v-card max-width="344" elevation="0">
               <v-list-item three-line class="pa-0">
-                <v-list-item-avatar size="40" color="grey"></v-list-item-avatar>
+                <v-list-item-avatar size="40" color="grey">
+                  <v-img :src="owner.avatar" alt="Owner"></v-img>
+                </v-list-item-avatar>
                 <v-list-item-content>
                   <div class="text-overline mb-4">{{ owner.name }}</div>
                 </v-list-item-content>
