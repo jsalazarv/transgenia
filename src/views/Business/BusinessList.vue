@@ -10,6 +10,9 @@
           </div>
         </v-container>
       </v-col>
+      <div class="map-wrapper" style="width: 50vw; height: 100vh">
+        <Map :businesses="businessList" :zoom="3" :is-clickable="false" />
+      </div>
     </v-row>
   </div>
 </template>
@@ -21,9 +24,10 @@ import IOwner from "@/entities/owner";
 import IBusiness from "@/entities/business";
 import BusinessCard from "@/components/BusinessCard.vue";
 import { IBusinessQueryParams } from "@/services/OwnerService/types";
+import Map from "@/components/Map.vue";
 
 @Component({
-  components: { BusinessCard },
+  components: { Map, BusinessCard },
 })
 export default class BusinessList extends Vue {
   protected ownerService = new OwnerService();
