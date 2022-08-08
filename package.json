@@ -5,6 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "start": "vue-cli-service serve --port=80 --https=true --mode=production",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -70,6 +71,12 @@
   },
   "lint-staged": {
     "*.{js,jsx,vue,ts,tsx}": "vue-cli-service lint"
+  },
+   "lint-staged": {
+    "*.{js,jsx,vue,ts,tsx}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
   },
   "engines" : {
     "npm" : "8.11.0",
