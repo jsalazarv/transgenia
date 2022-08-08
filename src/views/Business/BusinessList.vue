@@ -1,9 +1,23 @@
 <template>
   <div v-layout="'public-layout'">
-    <v-row class="wrapper pt-16">
+    <v-row class="wrapper pt-16 pl-16">
       <v-col cols="12" md="6">
-        <div class="mt-16">
+        <div class="mt-16 mb-10 d-flex align-center">
           <v-btn color="primary">Filter</v-btn>
+          <v-checkbox
+            class="mt-0 ml-3"
+            label="Pets"
+            color="secondary"
+            value="secondary"
+            hide-details
+          ></v-checkbox>
+          <v-checkbox
+            class="mt-0 ml-3"
+            label="Credit card"
+            color="secondary"
+            value="secondary"
+            hide-details
+          ></v-checkbox>
         </div>
         <div>
           <h1>Food & Drink</h1>
