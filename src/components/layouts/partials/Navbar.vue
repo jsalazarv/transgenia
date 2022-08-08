@@ -2,7 +2,9 @@
   <div>
     <v-app-bar class="px-md-15" color="primary" height="90" dark fixed app>
       <v-toolbar-title>
-        <img src="@/assets/logo.svg" alt="logo" />
+        <a href="/">
+          <img src="@/assets/logo.svg" alt="logo" />
+        </a>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
