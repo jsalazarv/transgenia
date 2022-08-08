@@ -1,10 +1,14 @@
 <template>
   <div>
     <v-card class="mx-auto" elevation="0">
-      <v-list-item three-line>
-        <v-list-item-avatar rounded size="400" color="grey">
-          <v-img :src="business.photo" alt="Business" />
-        </v-list-item-avatar>
+      <v-list-item three-line class="px-0">
+        <v-avatar style="border-radius: 30px" class="mr-3" rounded size="400">
+          <v-img
+            style="border-radius: 30px"
+            :src="business.photo"
+            alt="Business"
+          />
+        </v-avatar>
         <v-list-item-content>
           <div class="text-overline mb-4">{{ business.kind_of_bussiness }}</div>
           <v-list-item-title class="text-h5 font-weight-bold">
